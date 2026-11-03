@@ -60,6 +60,8 @@ enum EntityId : uint16_t {
   // Assumed, not established - see header::ASSUMED.
   ENT_HMI_MODEL,
   ENT_HEATING_ELEMENT_ACTIVE,
+  // Assumed, not established - see header::ASSUMED.
+  ENT_FAN_SPEED,
   // Derived, not wire traffic: computed from water_temperature, setpoint_max
   // and the user-supplied tank volume (v40.h).
   ENT_V40_WATER_AVAILABLE,
@@ -133,6 +135,10 @@ constexpr uint64_t CONTROLLER_MODEL = 0x0164006E01ULL;
 // between, not the setpoint itself - MAIN states them once per init.
 constexpr uint64_t SETPOINT_MIN = 0x016414B701ULL;
 constexpr uint64_t SETPOINT_MAX = 0x0164158301ULL;
+// Evaporator fan speed, rpm. Reads 0000 in every Explorer V5 capture here
+// (short windows); varies with the run on a Thermor Aeromax 6. See
+// docs/protocol.md "Assumed mappings".
+constexpr uint64_t FAN_SPEED = 0x016421B601ULL;
 constexpr uint64_t TEMPERATURES = 0x0164FEB006ULL;
 constexpr uint64_t WATER_TEMPERATURE_MINMAX = 0x0164FEBA03ULL;
 constexpr uint64_t COMPRESSOR_OUTLET_TEMPERATURE_MINMAX = 0x0164FEBD03ULL;
@@ -160,6 +166,7 @@ constexpr uint64_t ASSUMED[] = {
     CONTROLLER_MODEL,
     SETPOINT_MIN,
     SETPOINT_MAX,
+    FAN_SPEED,
     HMI_MODEL,
     HEATING_ELEMENT,
 };
@@ -177,6 +184,7 @@ constexpr uint64_t MAPPED[] = {
     CONTROLLER_MODEL,
     SETPOINT_MIN,
     SETPOINT_MAX,
+    FAN_SPEED,
     TEMPERATURES,
     WATER_TEMPERATURE_MINMAX,
     COMPRESSOR_OUTLET_TEMPERATURE_MINMAX,
@@ -202,7 +210,7 @@ constexpr size_t MAPPED_COUNT = sizeof(MAPPED) / sizeof(MAPPED[0]);
 // payload-less init headers listed under that table. Ascending, so
 // classify_header can binary-search it.
 constexpr uint64_t UNMAPPED[] = {
-    0x0164007001ULL, 0x0164007101ULL, 0x0164007501ULL, 0x01640165FEULL, 0x0164152A01ULL, 0x016421B601ULL,
+    0x0164007001ULL, 0x0164007101ULL, 0x0164007501ULL, 0x01640165FEULL, 0x0164152A01ULL,
     0x016443130DULL, 0x0164FDED01ULL, 0x0164FDEE01ULL, 0x0164FDFA01ULL, 0x0164FDFD01ULL, 0x0164FE0001ULL,
     0x0164FED801ULL, 0x0164FFDC01ULL, 0x0165152301ULL, 0x016516B301ULL, 0x0165FDF802ULL, 0x0165FDFB02ULL,
     0x0165FDFE02ULL, 0x0165FEF901ULL, 0x0165FEFB01ULL, 0x0165FEFD01ULL, 0x0165FEFF01ULL, 0x0165FF0101ULL,

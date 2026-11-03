@@ -548,6 +548,36 @@ int main() {
     CHECK(c.values.empty());
   }
 
+  // --- 016421B601: fan speed, an assumed mapping (header::ASSUMED). Plain
+  // big-endian uint16. The goldens only carry 0000; the non-zero values are
+  // from a Thermor Aeromax 6 run (0x007E on spin-up, 0x0500 running). ---
+  {
+    const struct {
+      uint8_t wire[2];
+      uint32_t rpm;
+    } cases[] = {{{0x00, 0x00}, 0u}, {{0x00, 0x7E}, 126u}, {{0x05, 0x00}, 1280u}, {{0xFF, 0xFF}, 65535u}};
+    for (const auto &tc : cases) {
+      atlantic_v5::Frame f = make_frame(atlantic_v5::header::FAN_SPEED, tc.wire, 2);
+      atlantic_v5::Decoder decoder;
+      Collector c;
+      decoder.decode(f, collect, &c);
+      CHECK(c.values.size() == 1);
+      CHECK(c.values[0].id == atlantic_v5::ENT_FAN_SPEED);
+      CHECK(c.values[0].kind == atlantic_v5::DecodedValue::Kind::UINT);
+      CHECK(c.values[0].u == tc.rpm);
+      CHECK(decoder.stats().unmapped_frames == 0);
+      CHECK(decoder.stats().unknown_headers == 0);
+    }
+
+    // Wrong catalogued length: rejected, nothing published.
+    const uint8_t three[] = {0x05, 0x00, 0x00};
+    atlantic_v5::Frame f = make_frame(atlantic_v5::header::FAN_SPEED, three, 3);
+    atlantic_v5::Decoder decoder;
+    Collector c;
+    decoder.decode(f, collect, &c);
+    CHECK(c.values.empty());
+  }
+
   // --- header::MAPPED and decode()'s case labels are two hand-maintained
   // lists with nothing tying them together. A payload-less frame
   // for a mapped header is silently skipped by design (the request

@@ -47,6 +47,7 @@ constexpr const char *NAMES[ENT_COUNT] = {
     "hmi_firmware_version",
     "hmi_model",
     "heating_element_active",
+    "fan_speed",
     "v40_water_available",
     "v40_water_capacity",
     "hot_water_available",

@@ -111,6 +111,8 @@ sensor:
       name: Cycle 5 count
     cycle_6_count:
       name: Cycle 6 count
+    fan_speed:
+      name: Fan speed
     # Framing counters, mitm-only spelling: one assembler per side, reported
     # separately so a dead side is visible. In mode: listener the unsuffixed
     # names (valid_frames, crc_errors, dropped_bytes) are used instead.

@@ -95,6 +95,8 @@ sensor:
       name: Cycle 5 count
     cycle_6_count:
       name: Cycle 6 count
+    fan_speed:
+      name: Fan speed
     # Framing counters, listener-only spelling (one wire, one assembler).
     # In mode: mitm these are rejected in favour of the _hmi/_main variants.
     valid_frames:

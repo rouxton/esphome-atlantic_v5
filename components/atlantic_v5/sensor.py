@@ -11,6 +11,7 @@ from esphome.const import (
     UNIT_CELSIUS,
     UNIT_LITRE,
     UNIT_PERCENT,
+    UNIT_REVOLUTIONS_PER_MINUTE,
 )
 
 from . import (
@@ -90,6 +91,19 @@ SENSORS = {
     "cycle_4_count": ("ENT_CYCLE_4_COUNT", _count_schema()),
     "cycle_5_count": ("ENT_CYCLE_5_COUNT", _count_schema()),
     "cycle_6_count": ("ENT_CYCLE_6_COUNT", _count_schema()),
+    # Assumed mapping (docs/protocol.md "Assumed mappings"), seen varying on one
+    # appliance only, so disabled in Home Assistant by default until a second
+    # source confirms it. Reads 0 on units that report no fan speed.
+    "fan_speed": (
+        "ENT_FAN_SPEED",
+        sensor.sensor_schema(
+            unit_of_measurement=UNIT_REVOLUTIONS_PER_MINUTE,
+            accuracy_decimals=0,
+            icon="mdi:fan",
+            state_class=STATE_CLASS_MEASUREMENT,
+            entity_category=ENTITY_CATEGORY_DIAGNOSTIC,
+        ).extend({cv.Optional(CONF_DISABLED_BY_DEFAULT, default=True, visibility=cv.Visibility.ADVANCED): cv.boolean}),
+    ),
     # Derived from water_temperature, setpoint_max and the hub's tank_volume.
     "v40_water_available": ("ENT_V40_WATER_AVAILABLE", _v40_schema(UNIT_LITRE)),
     "v40_water_capacity": ("ENT_V40_WATER_CAPACITY", _v40_schema(UNIT_LITRE)),

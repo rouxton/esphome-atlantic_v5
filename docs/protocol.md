@@ -261,6 +261,7 @@ Headers with an established meaning.
 | `0x0164006E01` | M | init | 13 | text | controller model — *assumed, see below* |
 | `0x016414B701` | M | init | 2 | temp | lowest setpoint the HMI will let the user dial — *assumed, see below* |
 | `0x0164158301` | M | init | 2 | temp | highest setpoint the HMI will let the user dial — *assumed, see below* |
+| `0x016421B601` | M | 1 s | 2 | uint16 | evaporator fan speed, rpm — *assumed, see below* |
 | `0x0164FEB006` | M | 1 s | 12 | 6 × temp | water, compressor outlet, air inlet, evaporator 1, 2, 3 |
 | `0x0164FEBA03` | M | 1 s | 5 | minmax | water temperature min / max |
 | `0x0164FEBD03` | M | 1 s | 5 | minmax | compressor outlet temperature min / max |
@@ -297,6 +298,7 @@ appliance as evidence against the mapping, not as a fault.
 | `0x0165000A01` | `hmi_model` | **none**, exactly as above. Note the HMI puts this on the wire, but that does not make it the HMI's own attribute — the panel also transmits `0x0165152301`, an appliance property | a label on the HMI panel, or the same second-appliance test |
 | `0x016414B701` | `setpoint_min` | see *Setpoint bounds* | the experiment described there |
 | `0x0164158301` | `setpoint_max` | see *Setpoint bounds* | the experiment described there |
+| `0x016421B601` | `fan_speed` | one appliance, a Thermor Aeromax 6 (R290, listener on AquaMQTT rev 2.0, 38400 8N1). `0000` at idle. A few seconds after `0x0165FEFB01` → `64` (with `0x0165FF0301` → `4C`) it climbs 126 → ~1300 over ~2 min and holds ±5 — the smooth spin-up and tight regulation of an EC fan — while the HMI's own status page shows *ventilation ON*. ~1280 with the compressor running. On stop it falls 1285 → 828 within ~5 s of `0x0165FEFB01` → `00`, then reads `0000`. Electrical draw stays at a few hundred W throughout, so it does not track compressor power. The Explorer V5 captures here all read `0000`, but they are 5–17 s windows with ~5 s of compressor time, so they neither confirm nor rule it out. "rpm" is an inference from the value range. Published disabled by default | a second appliance whose value varies with ventilation, or a tachometer |
 | `0x0165FEF701` | `heating_element_active` | three household-meter observations agree: `00` → `64` with +1200 W, `64` → `00` with the ~1700 W drop, and a 9-minute run that never left `00` and never passed ~500 W. Origin `H`, so a command rather than a report | a second appliance, or per-circuit metering. Also unresolved: the wire value is `00` or `64` (= 100) and has never been seen at another non-zero value, so a modulating element would show this should be a percentage, not a bool |
 
 ### Setpoint bounds
@@ -375,7 +377,6 @@ rewritten.
 | `0x0164007101` | M | init | 2 | `0315` |
 | `0x0164007501` | M | init | 1 | `02` |
 | `0x0164152A01` | M | init | 2 | `0006` |
-| `0x016421B601` | M | 1 s | 2 | `0000` |
 | `0x0164FDED01` | M | 1 s | 1 | `00` |
 | `0x0164FDEE01` | M | init | 1 | `00` — seen once, in the one captured initialisation burst |
 | `0x0164FDFA01` | M | init | 1 | `05` |

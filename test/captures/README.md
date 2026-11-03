@@ -37,8 +37,9 @@ a licence to freeze a golden: the rule above stands, and what qualifies a
 capture is the human review, recorded in the ticket that harvested it.
 
 `real_single_bus_idle_polling.csv` is 6.84 s of an Explorer V5 standing idle:
-ten HMI polling rounds, 502 frames, zero CRC errors, 25 distinct headers (13
-mapped, 12 unmapped, none unknown). It exercises the `temp`, `minmax`, `cycle`
+ten HMI polling rounds, 502 frames, zero CRC errors, 25 distinct headers (14
+mapped, 11 unmapped, none unknown; `0x016421B601` is mapped as `fan_speed` and
+reads `0000` throughout). It exercises the `temp`, `minmax`, `cycle`
 and `bool` codecs on real bytes. A sample of each was decoded by hand from
 [`docs/protocol.md`](../../docs/protocol.md) and compared to the replay output
 before the golden was frozen (the frame-by-frame working is in ticket 02), and

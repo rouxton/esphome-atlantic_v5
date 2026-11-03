@@ -177,6 +177,12 @@ void Decoder::decode(const Frame &f, Sink sink, void *ctx) const {
       emit_float(sink, ctx, ENT_SETPOINT_MAX, codec::decode_temp(p));
       break;
     }
+    case header::FAN_SPEED: {
+      if (!check_length(f, 2))
+        break;
+      emit_uint(sink, ctx, ENT_FAN_SPEED, codec::decode_u16(p));
+      break;
+    }
     case header::TEMPERATURES: {
       if (!check_length(f, 12))
         break;

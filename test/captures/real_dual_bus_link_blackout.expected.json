@@ -59,11 +59,11 @@
 {"t_us":5758158,"ch":"hmi","hex":"0164FF140379C1","key":"0164FF1403","crc":true,"values":[]}
 {"t_us":5765443,"ch":"main","hex":"0164FF14030300000048E4","key":"0164FF1403","crc":true,"values":[{"id":"input_i2","b":false},{"id":"input_i1","b":false},{"id":"heating_active","b":false}]}
 {"t_us":6227946,"ch":"hmi","hex":"016421B601E15A","key":"016421B601","crc":true,"values":[]}
-{"t_us":6234599,"ch":"main","hex":"016421B601020000CB56","key":"016421B601","crc":true,"values":[]}
+{"t_us":6234599,"ch":"main","hex":"016421B601020000CB56","key":"016421B601","crc":true,"values":[{"id":"fan_speed","u":0}]}
 {"t_us":6697605,"ch":"hmi","hex":"016421B601E15A","key":"016421B601","crc":true,"values":[]}
-{"t_us":6704065,"ch":"main","hex":"016421B601020000CB56","key":"016421B601","crc":true,"values":[]}
+{"t_us":6704065,"ch":"main","hex":"016421B601020000CB56","key":"016421B601","crc":true,"values":[{"id":"fan_speed","u":0}]}
 {"t_us":7167339,"ch":"hmi","hex":"016421B601E15A","key":"016421B601","crc":true,"values":[]}
-{"t_us":7174654,"ch":"main","hex":"016421B601020000CB56","key":"016421B601","crc":true,"values":[]}
+{"t_us":7174654,"ch":"main","hex":"016421B601020000CB56","key":"016421B601","crc":true,"values":[{"id":"fan_speed","u":0}]}
 {"t_us":7637738,"ch":"hmi","hex":"016516B3010101FCE2","key":"016516B301","crc":true,"values":[]}
 {"t_us":7644385,"ch":"main","hex":"016516B3015238","key":"016516B301","crc":true,"values":[]}
 {"t_us":8107456,"ch":"hmi","hex":"016516B3010101FCE2","key":"016516B301","crc":true,"values":[]}
@@ -187,7 +187,7 @@
 {"t_us":17052025,"ch":"hmi","hex":"0164FF140379C1","key":"0164FF1403","crc":true,"values":[]}
 {"t_us":17058999,"ch":"main","hex":"0164FF14030300000048E4","key":"0164FF1403","crc":true,"values":[{"id":"input_i2","b":false},{"id":"input_i1","b":false},{"id":"heating_active","b":false}]}
 {"t_us":17083056,"ch":"hmi","hex":"016421B601E15A","key":"016421B601","crc":true,"values":[]}
-{"t_us":17090386,"ch":"main","hex":"016421B601020000CB56","key":"016421B601","crc":true,"values":[]}
+{"t_us":17090386,"ch":"main","hex":"016421B601020000CB56","key":"016421B601","crc":true,"values":[{"id":"fan_speed","u":0}]}
 {"t_us":17114619,"ch":"hmi","hex":"016516B3010101FCE2","key":"016516B301","crc":true,"values":[]}
 {"t_us":17121239,"ch":"main","hex":"016516B3015238","key":"016516B301","crc":true,"values":[]}
 {"t_us":17144083,"ch":"hmi","hex":"0164FDED011B90","key":"0164FDED01","crc":true,"values":[]}

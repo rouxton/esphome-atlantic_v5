@@ -42,7 +42,7 @@
 {"t_us":1103942,"ch":"hmi","hex":"0164FF140379C1","key":"0164FF1403","crc":true,"values":[]}
 {"t_us":1111544,"ch":"main","hex":"0164FF14030300000048E4","key":"0164FF1403","crc":true,"values":[{"id":"input_i2","b":false},{"id":"input_i1","b":false},{"id":"heating_active","b":false}]}
 {"t_us":1135011,"ch":"hmi","hex":"016421B601E15A","key":"016421B601","crc":true,"values":[]}
-{"t_us":1141852,"ch":"main","hex":"016421B601020000CB56","key":"016421B601","crc":true,"values":[]}
+{"t_us":1141852,"ch":"main","hex":"016421B601020000CB56","key":"016421B601","crc":true,"values":[{"id":"fan_speed","u":0}]}
 {"t_us":1165639,"ch":"hmi","hex":"016516B3010101FCE2","key":"016516B301","crc":true,"values":[]}
 {"t_us":1172692,"ch":"main","hex":"016516B3015238","key":"016516B301","crc":true,"values":[]}
 {"t_us":1195142,"ch":"hmi","hex":"0164FDED011B90","key":"0164FDED01","crc":true,"values":[]}
@@ -92,7 +92,7 @@
 {"t_us":1934208,"ch":"hmi","hex":"0164FF140379C1","key":"0164FF1403","crc":true,"values":[]}
 {"t_us":1941817,"ch":"main","hex":"0164FF14030300000048E4","key":"0164FF1403","crc":true,"values":[{"id":"input_i2","b":false},{"id":"input_i1","b":false},{"id":"heating_active","b":false}]}
 {"t_us":1965238,"ch":"hmi","hex":"016421B601E15A","key":"016421B601","crc":true,"values":[]}
-{"t_us":1972124,"ch":"main","hex":"016421B601020000CB56","key":"016421B601","crc":true,"values":[]}
+{"t_us":1972124,"ch":"main","hex":"016421B601020000CB56","key":"016421B601","crc":true,"values":[{"id":"fan_speed","u":0}]}
 {"t_us":1995903,"ch":"hmi","hex":"016516B3010101FCE2","key":"016516B301","crc":true,"values":[]}
 {"t_us":2002978,"ch":"main","hex":"016516B3015238","key":"016516B301","crc":true,"values":[]}
 {"t_us":2025391,"ch":"hmi","hex":"0164FDED011B90","key":"0164FDED01","crc":true,"values":[]}
@@ -142,7 +142,7 @@
 {"t_us":2832936,"ch":"hmi","hex":"0164FF140379C1","key":"0164FF1403","crc":true,"values":[]}
 {"t_us":2839969,"ch":"main","hex":"0164FF14030300000048E4","key":"0164FF1403","crc":true,"values":[{"id":"input_i2","b":false},{"id":"input_i1","b":false},{"id":"heating_active","b":false}]}
 {"t_us":2864001,"ch":"hmi","hex":"016421B601E15A","key":"016421B601","crc":true,"values":[]}
-{"t_us":2871361,"ch":"main","hex":"016421B601020000CB56","key":"016421B601","crc":true,"values":[]}
+{"t_us":2871361,"ch":"main","hex":"016421B601020000CB56","key":"016421B601","crc":true,"values":[{"id":"fan_speed","u":0}]}
 {"t_us":2895609,"ch":"hmi","hex":"016516B3010101FCE2","key":"016516B301","crc":true,"values":[]}
 {"t_us":2902207,"ch":"main","hex":"016516B3015238","key":"016516B301","crc":true,"values":[]}
 {"t_us":2924151,"ch":"hmi","hex":"0164FDED011B90","key":"0164FDED01","crc":true,"values":[]}
@@ -192,7 +192,7 @@
 {"t_us":3734699,"ch":"hmi","hex":"0164FF140379C1","key":"0164FF1403","crc":true,"values":[]}
 {"t_us":3742458,"ch":"main","hex":"0164FF14030300000048E4","key":"0164FF1403","crc":true,"values":[{"id":"input_i2","b":false},{"id":"input_i1","b":false},{"id":"heating_active","b":false}]}
 {"t_us":3765747,"ch":"hmi","hex":"016421B601E15A","key":"016421B601","crc":true,"values":[]}
-{"t_us":3772750,"ch":"main","hex":"016421B601020000CB56","key":"016421B601","crc":true,"values":[]}
+{"t_us":3772750,"ch":"main","hex":"016421B601020000CB56","key":"016421B601","crc":true,"values":[{"id":"fan_speed","u":0}]}
 {"t_us":3796405,"ch":"hmi","hex":"016516B3010101FCE2","key":"016516B301","crc":true,"values":[]}
 {"t_us":3802501,"ch":"main","hex":"016516B3015238","key":"016516B301","crc":true,"values":[]}
 {"t_us":3824964,"ch":"hmi","hex":"0164FDED011B90","key":"0164FDED01","crc":true,"values":[]}
@@ -242,7 +242,7 @@
 {"t_us":4628854,"ch":"hmi","hex":"0164FF140379C1","key":"0164FF1403","crc":true,"values":[]}
 {"t_us":4636007,"ch":"main","hex":"0164FF14030300000048E4","key":"0164FF1403","crc":true,"values":[{"id":"input_i2","b":false},{"id":"input_i1","b":false},{"id":"heating_active","b":false}]}
 {"t_us":4659908,"ch":"hmi","hex":"016421B601E15A","key":"016421B601","crc":true,"values":[]}
-{"t_us":4666287,"ch":"main","hex":"016421B601020000CB56","key":"016421B601","crc":true,"values":[]}
+{"t_us":4666287,"ch":"main","hex":"016421B601020000CB56","key":"016421B601","crc":true,"values":[{"id":"fan_speed","u":0}]}
 {"t_us":4689635,"ch":"hmi","hex":"016516B3010101FCE2","key":"016516B301","crc":true,"values":[]}
 {"t_us":4696030,"ch":"main","hex":"016516B3015238","key":"016516B301","crc":true,"values":[]}
 {"t_us":4718170,"ch":"hmi","hex":"0164FDED011B90","key":"0164FDED01","crc":true,"values":[]}
@@ -292,7 +292,7 @@
 {"t_us":5427176,"ch":"hmi","hex":"0164FF140379C1","key":"0164FF1403","crc":true,"values":[]}
 {"t_us":5434271,"ch":"main","hex":"0164FF14030300000048E4","key":"0164FF1403","crc":true,"values":[{"id":"input_i2","b":false},{"id":"input_i1","b":false},{"id":"heating_active","b":false}]}
 {"t_us":5458236,"ch":"hmi","hex":"016421B601E15A","key":"016421B601","crc":true,"values":[]}
-{"t_us":5465668,"ch":"main","hex":"016421B601020000CB56","key":"016421B601","crc":true,"values":[]}
+{"t_us":5465668,"ch":"main","hex":"016421B601020000CB56","key":"016421B601","crc":true,"values":[{"id":"fan_speed","u":0}]}
 {"t_us":5489821,"ch":"hmi","hex":"016516B3010101FCE2","key":"016516B301","crc":true,"values":[]}
 {"t_us":5496508,"ch":"main","hex":"016516B3015238","key":"016516B301","crc":true,"values":[]}
 {"t_us":5519317,"ch":"hmi","hex":"0164FDED011B90","key":"0164FDED01","crc":true,"values":[]}
@@ -342,7 +342,7 @@
 {"t_us":6233914,"ch":"hmi","hex":"0164FF140379C1","key":"0164FF1403","crc":true,"values":[]}
 {"t_us":6241488,"ch":"main","hex":"0164FF14030300000048E4","key":"0164FF1403","crc":true,"values":[{"id":"input_i2","b":false},{"id":"input_i1","b":false},{"id":"heating_active","b":false}]}
 {"t_us":6264970,"ch":"hmi","hex":"016421B601E15A","key":"016421B601","crc":true,"values":[]}
-{"t_us":6271794,"ch":"main","hex":"016421B601020000CB56","key":"016421B601","crc":true,"values":[]}
+{"t_us":6271794,"ch":"main","hex":"016421B601020000CB56","key":"016421B601","crc":true,"values":[{"id":"fan_speed","u":0}]}
 {"t_us":6295603,"ch":"hmi","hex":"016516B3010101FCE2","key":"016516B301","crc":true,"values":[]}
 {"t_us":6302649,"ch":"main","hex":"016516B3015238","key":"016516B301","crc":true,"values":[]}
 {"t_us":6325096,"ch":"hmi","hex":"0164FDED011B90","key":"0164FDED01","crc":true,"values":[]}
@@ -392,7 +392,7 @@
 {"t_us":7134685,"ch":"hmi","hex":"0164FF140379C1","key":"0164FF1403","crc":true,"values":[]}
 {"t_us":7141604,"ch":"main","hex":"0164FF14030300000048E4","key":"0164FF1403","crc":true,"values":[{"id":"input_i2","b":false},{"id":"input_i1","b":false},{"id":"heating_active","b":false}]}
 {"t_us":7165745,"ch":"hmi","hex":"016421B601E15A","key":"016421B601","crc":true,"values":[]}
-{"t_us":7173024,"ch":"main","hex":"016421B601020000CB56","key":"016421B601","crc":true,"values":[]}
+{"t_us":7173024,"ch":"main","hex":"016421B601020000CB56","key":"016421B601","crc":true,"values":[{"id":"fan_speed","u":0}]}
 {"t_us":7196415,"ch":"hmi","hex":"016516B3010101FCE2","key":"016516B301","crc":true,"values":[]}
 {"t_us":7202777,"ch":"main","hex":"016516B3015238","key":"016516B301","crc":true,"values":[]}
 {"t_us":7225028,"ch":"hmi","hex":"0164FDED011B90","key":"0164FDED01","crc":true,"values":[]}
@@ -442,7 +442,7 @@
 {"t_us":8033713,"ch":"hmi","hex":"0164FF140379C1","key":"0164FF1403","crc":true,"values":[]}
 {"t_us":8040818,"ch":"main","hex":"0164FF14030300000048E4","key":"0164FF1403","crc":true,"values":[{"id":"input_i2","b":false},{"id":"input_i1","b":false},{"id":"heating_active","b":false}]}
 {"t_us":8064762,"ch":"hmi","hex":"016421B601E15A","key":"016421B601","crc":true,"values":[]}
-{"t_us":8071117,"ch":"main","hex":"016421B601020000CB56","key":"016421B601","crc":true,"values":[]}
+{"t_us":8071117,"ch":"main","hex":"016421B601020000CB56","key":"016421B601","crc":true,"values":[{"id":"fan_speed","u":0}]}
 {"t_us":8094471,"ch":"hmi","hex":"016516B3010101FCE2","key":"016516B301","crc":true,"values":[]}
 {"t_us":8100871,"ch":"main","hex":"016516B3015238","key":"016516B301","crc":true,"values":[]}
 {"t_us":8123040,"ch":"hmi","hex":"0164FDED011B90","key":"0164FDED01","crc":true,"values":[]}
@@ -492,7 +492,7 @@
 {"t_us":8931694,"ch":"hmi","hex":"0164FF140379C1","key":"0164FF1403","crc":true,"values":[]}
 {"t_us":8938817,"ch":"main","hex":"0164FF14030300000048E4","key":"0164FF1403","crc":true,"values":[{"id":"input_i2","b":false},{"id":"input_i1","b":false},{"id":"heating_active","b":false}]}
 {"t_us":8962736,"ch":"hmi","hex":"016421B601E15A","key":"016421B601","crc":true,"values":[]}
-{"t_us":8969107,"ch":"main","hex":"016421B601020000CB56","key":"016421B601","crc":true,"values":[]}
+{"t_us":8969107,"ch":"main","hex":"016421B601020000CB56","key":"016421B601","crc":true,"values":[{"id":"fan_speed","u":0}]}
 {"t_us":8992438,"ch":"hmi","hex":"016516B3010101FCE2","key":"016516B301","crc":true,"values":[]}
 {"t_us":8998860,"ch":"main","hex":"016516B3015238","key":"016516B301","crc":true,"values":[]}
 {"t_us":9021001,"ch":"hmi","hex":"0164FDED011B90","key":"0164FDED01","crc":true,"values":[]}
@@ -542,7 +542,7 @@
 {"t_us":9834348,"ch":"hmi","hex":"0164FF140379C1","key":"0164FF1403","crc":true,"values":[]}
 {"t_us":9841113,"ch":"main","hex":"0164FF14030300000048E4","key":"0164FF1403","crc":true,"values":[{"id":"input_i2","b":false},{"id":"input_i1","b":false},{"id":"heating_active","b":false}]}
 {"t_us":9864486,"ch":"hmi","hex":"016421B601E15A","key":"016421B601","crc":true,"values":[]}
-{"t_us":9871408,"ch":"main","hex":"016421B601020000CB56","key":"016421B601","crc":true,"values":[]}
+{"t_us":9871408,"ch":"main","hex":"016421B601020000CB56","key":"016421B601","crc":true,"values":[{"id":"fan_speed","u":0}]}
 {"t_us":9895119,"ch":"hmi","hex":"016516B3010101FCE2","key":"016516B301","crc":true,"values":[]}
 {"t_us":9901164,"ch":"main","hex":"016516B3015238","key":"016516B301","crc":true,"values":[]}
 {"t_us":9923703,"ch":"hmi","hex":"0164FDED011B90","key":"0164FDED01","crc":true,"values":[]}
@@ -592,7 +592,7 @@
 {"t_us":10729571,"ch":"hmi","hex":"0164FF140379C1","key":"0164FF1403","crc":true,"values":[]}
 {"t_us":10736990,"ch":"main","hex":"0164FF14030300000048E4","key":"0164FF1403","crc":true,"values":[{"id":"input_i2","b":false},{"id":"input_i1","b":false},{"id":"heating_active","b":false}]}
 {"t_us":10760613,"ch":"hmi","hex":"016421B601E15A","key":"016421B601","crc":true,"values":[]}
-{"t_us":10767286,"ch":"main","hex":"016421B601020000CB56","key":"016421B601","crc":true,"values":[]}
+{"t_us":10767286,"ch":"main","hex":"016421B601020000CB56","key":"016421B601","crc":true,"values":[{"id":"fan_speed","u":0}]}
 {"t_us":10791270,"ch":"hmi","hex":"016516B3010101FCE2","key":"016516B301","crc":true,"values":[]}
 {"t_us":10798133,"ch":"main","hex":"016516B3015238","key":"016516B301","crc":true,"values":[]}
 {"t_us":10820760,"ch":"hmi","hex":"0164FDED011B90","key":"0164FDED01","crc":true,"values":[]}
@@ -642,7 +642,7 @@
 {"t_us":11530575,"ch":"hmi","hex":"0164FF140379C1","key":"0164FF1403","crc":true,"values":[]}
 {"t_us":11537573,"ch":"main","hex":"0164FF14030300000048E4","key":"0164FF1403","crc":true,"values":[{"id":"input_i2","b":false},{"id":"input_i1","b":false},{"id":"heating_active","b":false}]}
 {"t_us":11561612,"ch":"hmi","hex":"016421B601E15A","key":"016421B601","crc":true,"values":[]}
-{"t_us":11568965,"ch":"main","hex":"016421B601020000CB56","key":"016421B601","crc":true,"values":[]}
+{"t_us":11568965,"ch":"main","hex":"016421B601020000CB56","key":"016421B601","crc":true,"values":[{"id":"fan_speed","u":0}]}
 {"t_us":11593194,"ch":"hmi","hex":"016516B3010101FCE2","key":"016516B301","crc":true,"values":[]}
 {"t_us":11599810,"ch":"main","hex":"016516B3015238","key":"016516B301","crc":true,"values":[]}
 {"t_us":11622698,"ch":"hmi","hex":"0164FDED011B90","key":"0164FDED01","crc":true,"values":[]}
